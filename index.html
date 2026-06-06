@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Who Do You Sing Like?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <svg class="mic" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 20h2v2h-2z"/></svg>
+      <h1>Who Do You Sing Like?</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <label class="apikey-label">Anthropic API Key (paste, not saved):
+        <input id="apiKey" type="password" placeholder="sk-..." autocomplete="off">
+      </label>
+
+      <form id="survey" class="survey">
+        <div id="stepper" class="stepper">
+          <!-- Steps will be injected here -->
+        </div>
+
+        <div class="actions">
+          <button id="prevBtn" type="button" class="btn ghost">Back</button>
+          <button id="nextBtn" type="button" class="btn">Next</button>
+        </div>
+
+        <div class="final">
+          <button id="submitBtn" type="button" class="btn primary">Find my artist match</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="results" id="results">
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <div>Finding matches...</div>
+      </div>
+      <div id="cards" class="cards"></div>
+    </section>
+  </main>
+
+  <template id="cardTpl">
+    <article class="card">
+      <h3 class="artist"></h3>
+      <p class="why"></p>
+      <p class="song"><strong>Song to try:</strong> <span class="songName"></span></p>
+    </article>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
