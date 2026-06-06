@@ -24,8 +24,7 @@ body{
 .controls{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
 .results{padding:18px}
 
-.apikey-label{display:block;font-size:0.85rem;color:var(--muted);margin-bottom:12px}
-.apikey-label input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:inherit}
+.hint{color:var(--muted);margin-bottom:18px;line-height:1.6}
 
 .stepper{min-height:260px}
 .step{display:none}
